@@ -6,18 +6,24 @@
     <meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="resources/css/reset-css.css">
     <link rel="stylesheet" type="text/css" href="resources/css/styles.css">
-    <!-- <script src="resources/js/"></!-->
 </head>
 
 <body>
 	<main class="container">
         <h1>Grid generation</h1>
-        <div class="grid">
+        <form>
+            Background color:
+            <input id="background-color-input-id" type="color" value="#000000" name="background-color-input"><br>
+            <input id="grid-button" type="button" value="Grid">
+        </form> 
+        <div id="grid">
         </div>
 	</main>
 	<footer>
 		© CopyRight Dimo Dimov. MIT License.
-	</footer>
+    </footer>
+    
+    <script src="resources/js/grid-generation.js"></script>
 </body>
 
 </html>
