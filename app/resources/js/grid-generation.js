@@ -21,7 +21,22 @@ function gridBackgroundColor(grid) {
 }
 
 function gridLines(grid) {
+    let linearGradients = 
+        `${verticalLinesLinearGradient()}, ${horizontalLinesLinearGradient()}`;
+    }
+
+function verticalLinesLinearGradient(){
     let verticalLinesColor = document.getElementById("vertical-lines-color-input-id");
-    let linearGradients = `linear-gradient(${verticalLinesColor.value} 100px, transparent 100px)`;
-    grid.style.setProperty("background-image", linearGradients);
+    let verticalLinesWidthPixels = document.getElementById("vertical-lines-width-input-id");
+    let verticalLinesTransparentPixels = document.getElementById("vertical-lines-transparent-input-id");
+
+    return `linear-gradient(${verticalLinesColor.value} ${verticalLinesWidthPixels.value}px, transparent ${verticalLinesTransparentPixels.value}px)`
+}
+
+function horizontalLinesLinearGradient(){
+    let horizontalLinesColor = document.getElementById("horizontal-lines-color-input-id");
+    let horizontalLinesWidthPixels = document.getElementById("horizontal-lines-width-input-id");
+    let horizontalLinesTransparentPixels = document.getElementById("horizontal-lines-transparent-input-id");
+
+    return `linear-gradient(90deg, ${horizontalLinesColor.value} ${horizontalLinesWidthPixels.value}px, transparent ${horizontalLinesTransparentPixels.value}px)`
 }
