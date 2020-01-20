@@ -1,15 +1,15 @@
-(function gridButton() {
-    let button = document.getElementById("grid-button");
-    button.addEventListener("click", gridButtonClick);
+(function gridContainer() {
+    let button = document.getElementById("container");
+    button.addEventListener("change", gridButtonClick);
 }());
 
-function gridButtonClick() {
+function gridChange() {
     let grid = getGridElement();
     gridBackgroundColor(grid);
     gridLines(grid);
 }
 
-gridButtonClick();
+gridChange();
 
 function getGridElement() {
     return document.getElementById("grid");
@@ -23,7 +23,7 @@ function gridBackgroundColor(grid) {
 function gridLines(grid) {
     let linearGradients = 
         `${verticalLinesLinearGradient()}, ${horizontalLinesLinearGradient()}`;
-    }
+}
 
 function verticalLinesLinearGradient(){
     let verticalLinesColor = document.getElementById("vertical-lines-color-input-id");
