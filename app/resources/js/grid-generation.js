@@ -1,6 +1,6 @@
 (function gridContainer() {
     let button = document.getElementById("container");
-    button.addEventListener("change", gridButtonClick);
+    button.addEventListener("change", gridChange);
 }());
 
 function gridChange() {
@@ -22,21 +22,26 @@ function gridBackgroundColor(grid) {
 
 function gridLines(grid) {
     let linearGradients = 
-        `${verticalLinesLinearGradient()}, ${horizontalLinesLinearGradient()}`;
+        `${LinearGradient("vertical-lines-color-input-id", "vertical-lines-width-input-id", "vertical-lines-transparent-input-id", false)},
+         ${LinearGradient("horizontal-lines-color-input-id", "horizontal-lines-width-input-id", "horizontal-lines-transparent-input-id", true)}`;
 }
 
-function verticalLinesLinearGradient(){
-    let verticalLinesColor = document.getElementById("vertical-lines-color-input-id");
-    let verticalLinesWidthPixels = document.getElementById("vertical-lines-width-input-id");
-    let verticalLinesTransparentPixels = document.getElementById("vertical-lines-transparent-input-id");
+function LinearGradient(ColorID, WidthPixelsID, TransparentPixelsID, isHorizontal){
+    let Color = document.getElementById(ColorID);
+    let WidthPixels = document.getElementById(WidthPixelsID);
+    let TransparentPixels = document.getElementById(TransparentPixelsID);
 
-    return `linear-gradient(${verticalLinesColor.value} ${verticalLinesWidthPixels.value}px, transparent ${verticalLinesTransparentPixels.value}px)`
+    if (isHorizontal) {
+        return verticalLinesLinearGradient(Color, WidthPixels, TransparentPixels);
+    }
+
+    return horizontalLinesLinearGradient(Color, WidthPixels, TransparentPixels);
 }
 
-function horizontalLinesLinearGradient(){
-    let horizontalLinesColor = document.getElementById("horizontal-lines-color-input-id");
-    let horizontalLinesWidthPixels = document.getElementById("horizontal-lines-width-input-id");
-    let horizontalLinesTransparentPixels = document.getElementById("horizontal-lines-transparent-input-id");
+function verticalLinesLinearGradient(Color, WidthPixels, TransparentPixels){
+    return `linear-gradient(${Color.value} ${WidthPixels.value}px, transparent ${TransparentPixels.value}px)`;
+}
 
-    return `linear-gradient(90deg, ${horizontalLinesColor.value} ${horizontalLinesWidthPixels.value}px, transparent ${horizontalLinesTransparentPixels.value}px)`
+function horizontalLinesLinearGradient(Color, WidthPixels, TransparentPixels){
+    return `linear-gradient(90deg, ${Color.value} ${WidthPixels.value}px, transparent ${TransparentPixels.value}px)`;
 }
