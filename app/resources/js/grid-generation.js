@@ -6,9 +6,9 @@
 function gridChange() {
     let grid = getGridElement();
     gridBackgroundColor(grid);
+    gridHeight(grid);
     gridLines(grid);
     gridBackgroundSize(grid);
-    gridBackgroundPosition(grid);
 }
 
 gridChange();
@@ -20,6 +20,12 @@ function getGridElement() {
 function gridBackgroundColor(grid) {
     let backgroundColor = document.getElementById("background-color-input-id");
     grid.style.setProperty("background-color", backgroundColor.value);
+}
+
+function gridHeight(grid) {
+    let height = document.getElementById("grid-height-input-id");
+    console.log(height);
+    grid.style.setProperty("height", `${height.value}px`);
 }
 
 function gridLines(grid) {
@@ -53,9 +59,5 @@ function horizontalLinesLinearGradient(Color, WidthPixels, TransparentPixels){
 }
 
 function gridBackgroundSize(grid){
-
-}
-
-function gridBackgroundPosition(grid){
-    
+    grid.style.setProperty("background-size", "300px 300px, 300px 300px, 30px 30px, 30px 30px");
 }
