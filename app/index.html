@@ -4,69 +4,74 @@
 <head>
     <title>Grid generation</title>
     <meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="resources/css/reset-css.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/reset-css.css">
     <link rel="stylesheet" type="text/css" href="resources/css/styles.css">
 </head>
 
 <body>
-	<main id="container">
+    <main id="container">
         <h1>Grid generation</h1>
         <form>
-            Background color:
-            <input id="background-color-input-id" type="color" value="#000000" name="background-color-input">
-            <br>
-
-            Grid height pixels:
-            <input id="grid-height-input-id" type="number" value="900" name="grid-height-input">
-            <br>
-
-            Vertical lines color:
-            <input id="vertical-lines-color-input-id" type="color" value="#00ff00" name="vertical-lines-color-input">
-            <br>
-            Vertical lines width pixels:
-            <input id="vertical-lines-width-input-id" type="number" value="3" name="vertical-lines-width-input">
-            <br>
-            Vertical lines transparent pixels:
-            <input id="vertical-lines-transparent-input-id" type="number" value="1" name="vertical-lines-transparent-input">
-            <br>
-
-            Horizontal lines color:
-            <input id="horizontal-lines-color-input-id" type="color" value="#00ff00" name="horizontal-lines-color-input">
-            <br>
-            Horizontal lines width pixels:
-            <input id="horizontal-lines-width-input-id" type="number" value="3" name="horizontal-lines-width-input">
-            <br>
-            Horizontal lines transparent pixels:
-            <input id="horizontal-lines-transparent-input-id" type="number" value="1" name="horizontal-lines-transparent-input">
-            <br>
-
-            Small vertical lines color:
-            <input id="small-vertical-lines-color-input-id" type="color" value="#00ff00" name="small-vertical-lines-color-input">
-            <br>
-            Small vertical lines width pixels:
-            <input id="small-vertical-lines-width-input-id" type="number" value="1" name="small-vertical-lines-width-input">
-            <br>
-            Small vertical lines transparent pixels:
-            <input id="small-vertical-lines-transparent-input-id" type="number" value="1" name="small-vertical-lines-transparent-input">
-            <br>
-
-            Small horizontal lines color:
-            <input id="small-horizontal-lines-color-input-id" type="color" value="#00ff00" name="small-horizontal-lines-color-input">
-            <br>
-            Small horizontal lines width pixels:
-            <input id="small-horizontal-lines-width-input-id" type="number" value="1" name="small-horizontal-lines-width-input">
-            <br>
-            Small horizontal lines transparent pixels:
-            <input id="small-horizontal-lines-transparent-input-id" type="number" value="1" name="small-horizontal-lines-transparent-input">
-            <br>
-        </form> 
+            <div class="form-inputs">
+                Background color:
+                <input id="background-color-input-id" type="color" value="#000000" name="background-color-input">
+                Grid height pixels:
+                <input id="grid-height-input-id" type="number" value="900" name="grid-height-input">
+            </div>
+            <div class="form-inputs">
+                Vertical lines:
+                Color
+                <input id="vertical-lines-color-input-id" type="color" value="#00ff00"
+                    name="vertical-lines-color-input">
+                Width pixels
+                <input id="vertical-lines-width-input-id" type="number" value="2" name="vertical-lines-width-input">
+                Transparent pixels
+                <input id="vertical-lines-transparent-input-id" type="number" value="1"
+                    name="vertical-lines-transparent-input">
+            </div>
+            <div class="form-inputs">
+                Horizontal lines:
+                Color
+                <input id="horizontal-lines-color-input-id" type="color" value="#00ff00"
+                    name="horizontal-lines-color-input">
+                Width pixels
+                <input id="horizontal-lines-width-input-id" type="number" value="2" name="horizontal-lines-width-input">
+                Transparent pixels
+                <input id="horizontal-lines-transparent-input-id" type="number" value="1"
+                    name="horizontal-lines-transparent-input">
+            </div>
+            <div class="form-inputs">
+                Small vertical lines:
+                Color
+                <input id="small-vertical-lines-color-input-id" type="color" value="#00ff00"
+                    name="small-vertical-lines-color-input">
+                Width pixels
+                <input id="small-vertical-lines-width-input-id" type="number" value="0"
+                    name="small-vertical-lines-width-input">
+                Transparent pixels
+                <input id="small-vertical-lines-transparent-input-id" type="number" value="1"
+                    name="small-vertical-lines-transparent-input">
+            </div>
+            <div class="form-inputs">
+                Small horizontal lines:
+                Color
+                <input id="small-horizontal-lines-color-input-id" type="color" value="#00ff00"
+                    name="small-horizontal-lines-color-input">
+                Width pixels
+                <input id="small-horizontal-lines-width-input-id" type="number" value="0"
+                    name="small-horizontal-lines-width-input">
+                Transparent pixels
+                <input id="small-horizontal-lines-transparent-input-id" type="number" value="1"
+                    name="small-horizontal-lines-transparent-input">
+            </div>
+        </form>
         <div id="grid">
         </div>
-	</main>
-	<footer>
-		© CopyRight Dimo Dimov. MIT License.
+    </main>
+    <footer>
+        © CopyRight Dimo Dimov. MIT License.
     </footer>
-    
+
     <script src="resources/js/grid-generation.js"></script>
 </body>
 
